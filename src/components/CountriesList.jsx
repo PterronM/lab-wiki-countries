@@ -1,13 +1,10 @@
 
-import { computeHeadingLevel } from "@testing-library/react";
 import { Link } from "react-router-dom";
 
 function CountriesList(props) {
-
-
-
-    const {allCountries} = props
-    // console.log(allCountries)
+  const {allCountries} = props
+  
+    
 
 
   return (
@@ -15,7 +12,7 @@ function CountriesList(props) {
       <div className="col-5" style={{maxHeight: "90vh", overflow: "scroll"}}>
         <div className="list-group">
           {allCountries.map((eachCountry)=>{
-            {/* console.log(eachCountry) */}
+            
             return(
                 <div key={eachCountry.alpha3Code}>
                     <img src={`https://flagpedia.net/data/flags/icon/72x54/${eachCountry.alpha2Code.toLowerCase()}.png`} alt=""/>

@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 
 function App() {
   const [allCountries, setAllCountries] = useState([]);
+  // console.log(allCountries)
 
   useEffect(()=>{
     getData()
@@ -18,7 +19,7 @@ function App() {
   const getData = async () => {
     try {
       const response = await axios.get('https://ih-countries-api.herokuapp.com/countries');
-      // console.log(response.data)
+      // (response.data)
       setAllCountries(response.data);
     } catch (error) {
       console.log(error);
@@ -32,8 +33,7 @@ function App() {
     <div className="App">
 
       <Navbar />
-      {/* <CountriesList allCountries={allCountries}/> */}
-      
+     
     <Routes>
       <Route path='/' element={<CountriesList allCountries={allCountries}/>} />
       <Route path='/countries-details/:idCountry' element={<CountryDetails/>} />
