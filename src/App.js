@@ -2,8 +2,8 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import CountriesList from './components/CountriesList';
-import CountryDetails from './components/CountryDetails';
+import CountriesList from './pages/CountriesList';
+import CountryDetails from './pages/CountryDetails';
 // import Home from './components/Home';
 import Navbar from './components/Navbar';
 
